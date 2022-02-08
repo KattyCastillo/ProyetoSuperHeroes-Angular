@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input , Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,15 +8,20 @@ import { Router } from '@angular/router';
 })
 export class HeroesTarjetasComponent implements OnInit {
 
-  constructor(private router: Router) { }
-
   @Input() heroeTarjeta: any = {};
   @Input() indexTarjeta!: number;
+
+  @Output() solicitarHeroe: EventEmitter<number>;
+
+  constructor(private router: Router) {
+    this.solicitarHeroe = new EventEmitter();
+   }
 
   ngOnInit(): void {
   }
 
   redireccionarHeroe(index: number):void{
-    this.router.navigate(['heroes/heroe', this.indexTarjeta]);
+   // this.router.navigate(['heroes/heroe', this.indexTarjeta]);
+   this.solicitarHeroe.emit(this.indexTarjeta);
   }
 }
