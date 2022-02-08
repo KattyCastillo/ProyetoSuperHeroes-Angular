@@ -16,6 +16,7 @@ import { AboutComponent } from './components/about/about.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
 import { SharedComponent } from './components/shared/shared.component';
+import { HeroesTarjetasComponent } from './components/heroes-tarjetas/heroes-tarjetas.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SharedComponent } from './components/shared/shared.component';
     AboutComponent,
     HeroesComponent,
     HeroeComponent,
-    SharedComponent
+    SharedComponent,
+    HeroesTarjetasComponent
   ],
   imports: [
     CommonModule,

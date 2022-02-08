@@ -1,0 +1,17 @@
+
+  <div class="card h-100 animated fadeIn fast"> 
+    <img [src]="heroeTarjeta.img" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{heroeTarjeta.nombre}}</h5>
+        <p class="card-text">{{heroeTarjeta.bio}}</p>
+    </div>
+    <div class="card-footer">
+        <small class="text-muted">{{heroeTarjeta.casa}}</small>
+        <div>
+            <button class="btn btn-outline-primary btn-block" (click)="redireccionarHeroe(heroeTarjeta.index)">
+                Ver mas...
+            </button>
+            <!-- <a [routerLink]="['/heroe',i]" class="btb btb-aotline-primary btn-block ml-auto" >Ver más..</a> -->
+        </div>
+    </div>
+
